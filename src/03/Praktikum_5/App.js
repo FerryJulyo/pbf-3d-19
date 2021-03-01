@@ -1,6 +1,15 @@
 import logo from './logo.svg';
 import './App.css';
 
+function App() {
+  let me = {name:"Mohammad Ferry Julyo", avatarUrl:logo}
+  return (
+    <div>
+      <Komentar text="Knowing is not enought, we must apply" date="27 Februari 2021" author={me} />
+    </div>
+  );
+}
+
 function Avatar (props) {
   return (
     <img width="77px" className="Avatar"
