@@ -64,7 +64,7 @@ class Menu extends React.Component {
                                         <img src="assets/img/vertical-menu-bg.png" alt="Menu bg" class="tm-side-menu-bg" />
                                     </div>
                                 </div>
-                                <API/>
+                                <API />
                             </div>
                         </section>
                     </div>

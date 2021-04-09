@@ -10,7 +10,7 @@ function DaftarMenu(props) {
                 <p class="tm-product-description">{props.deskripsi}</p>
             </div>
             <div class="tm-product-price">
-                <a href="#" class="tm-product-price-link tm-handwriting-font"><span class="tm-product-price-currency"/> {props.harga} </a>
+                <a href="#" class="tm-product-price-link tm-handwriting-font"><span class="tm-product-price-currency" /> {props.harga} </a>
             </div>
         </div>
 
@@ -54,9 +54,9 @@ class Blog extends React.Component {
         } else if (!isLoaded) {
             return <div>Sedang memuat...</div>;
         } else {
-        
+
             return (
-                <div class="tm-menu-product-content col-lg-9 col-md-9"> 
+                <div class="tm-menu-product-content col-lg-9 col-md-9">
                     {
                         dataMenu.map(menu => {
                             return <DaftarMenu judul={menu.judul} deskripsi={menu.deskripsi} gambar={menu.gambar} harga={menu.harga} />
