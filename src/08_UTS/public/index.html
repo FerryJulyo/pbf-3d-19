@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Cafe House Template</title>
+
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,400italic,600,700' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Damion' rel='stylesheet' type='text/css'>
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/css/font-awesome.min.css" rel="stylesheet">
+    <link href="assets/css/templatemo-style.css" rel="stylesheet">
+    <link rel="shortcut icon" href="assets/img/favicon.ico" type="image/x-icon" />
+
+  </head>
+
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root"></div>
+     
+     
+    <script>
+      /* Google map
+      ------------------------------------------------*/
+      var map = '';
+      var center;
+
+      function initialize() {
+          var mapOptions = {
+            zoom: 16,
+            center: new google.maps.LatLng(-7.1502 ,111.8817),
+            scrollwheel: false
+          };
+
+          map = new google.maps.Map(document.getElementById('google-map'),  mapOptions);
+
+          google.maps.event.addDomListener(map, 'idle', function() {
+              calculateCenter();
+          });
+
+          google.maps.event.addDomListener(window, 'resize', function() {
+              map.setCenter(center);
+          });
+      }
+
+      function calculateCenter() {
+        center = map.getCenter();
+      }
+
+      function loadGoogleMap(){
+          var script = document.createElement('script');
+          script.type = 'text/javascript';
+          script.src = 'https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false&' + 'callback=initialize';
+          document.body.appendChild(script);
+      }
+      $(document).ready(function(){
+          loadGoogleMap();
+      });
+  </script>
+
+      
+  </body>
+</html>
