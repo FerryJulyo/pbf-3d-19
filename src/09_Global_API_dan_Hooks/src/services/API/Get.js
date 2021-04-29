@@ -1,4 +1,4 @@
-import { baseUrlApi} from './Config'
+import { baseUrlApi} from './Config';
 
 const GetAPI = (path) => {
     const promise = new Promise((resolve, reject) => {
